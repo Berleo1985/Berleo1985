@@ -1,0 +1,23 @@
+import java.util.*;
+public class FiboFacRecMethods {
+    public static long  fac(int N) {
+        if (N == 0)
+            return 1;
+        else
+            return N * fac(N-1);
+    }
+    public static int fibo(int N) {
+        if(N <= 1) {
+            return N;
+        } else {
+            return fibo(N-1) + fibo(N-2);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner in = new Scanner(System.in);
+        System.out.print("Please enter a number that is positive: ");
+        int n = in.nextInt();
+        System.out.println("Factorial of " + n + " is " + fac(n));
+        System.out.println("Fibonacci of " + n + " is " + fibo(n));
+    }
+}
