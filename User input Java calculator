@@ -1,0 +1,50 @@
+public class Calculator {
+    public static void main(String[] args) {
+
+        while (true) {
+            char ch;
+            System.out.print("\n");
+            TextIO.skipBlanks();
+            if (TextIO.peek() == '\n') {
+                break;
+            }
+            try {
+                calc();
+            } catch (IllegalArgumentException e) {
+                System.out.println("Error: " + e.getMessage());
+                System.out.print("remove user input: ");
+            }
+            do {
+                ch = TextIO.getAnyChar();
+                System.out.print(ch);
+            }
+            while (ch != '\n');
+        }
+        System.out.println("Enter set computations:");
+    }
+
+private static void calc() {
+
+private static void Calculator() {
+
+    TreeSet<Integer> A, B;
+    char op;
+    A = readSet();
+    TextIO.skipBlanks();
+    if (TextIO.peek() != '*' && TextIO.peek() != '+' && TextIO.peek() != '-')
+        throw new IllegalArgumentException("Error coming *, +, or  - after first set.");
+    op = TextIO.getAnyChar();
+    B = readSet();
+    TextIO.skipBlanks();
+    if (TextIO.peek() != '\n')
+        throw new IllegalArgumentException("additional input was not expected.");
+    while (op == '+')
+        A.addAll(B);
+    If(op == '*') {
+        A.retainAll(B);
+    else
+        A.removeAll(B);
+        System.out.print("Total:  " + A);
+    }
+    private static TreeSet<Integer> readSet () {
+    }
