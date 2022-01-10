@@ -1,0 +1,39 @@
+Uefa_Best_Teams = { "ManUtd": ["England",2], "Milan": ["Italy", 1], "Mancity": ["England", 1], "Bayarn": ["Germany", 1], "Barca": ["Spain", 1],  "Madrid": ["Spain",2],}
+
+with open ('end_season.txt', 'w') as s20_s21:
+	s20_s21.write("{\n")
+	for team in (Uefa_Best_Teams.keys()):
+		s20_s21.write("'%s':%s, \n" %(team, Uefa_Best_Teams[team]))
+	s20_s21.close()
+
+
+#Adding extra 3 items to file
+with open('end_season.txt', 'a') as s20_s21:
+    s20_s21.write("'Juventus':['Italy', 2],\n"
+    		"'Dortmund':['Germany',2],\n"
+    		"'PSG':['France',2]\n")
+    s20_s21.write('}')
+s20_s21.close()
+
+conv_dict = []
+with open('end_season.txt','r') as country:
+	conv_dict = eval(country.read())
+print ("original list plus the additional 3 items")
+print('\n')
+print (conv_dict)
+print('\n')
+
+def dict_inv(o):
+        inv = dict()
+        for player in o:
+                for ball in o[player]:
+                        if ball not in inv:
+                                inv[ball] = [player]
+                        else:
+                                inv[ball].append(player)
+        print(inv)
+        print('\n')
+
+print('Final result inverted dictionary')
+print('\n')
+dict_inv(conv_dict)
