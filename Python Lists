@@ -1,0 +1,228 @@
+'''Differant  Lists'''
+#teams  = ['Man Utd', 'Man city', 'Arsenal'] #string list
+#scores = [2, 1, 7] # intergers list
+#empty  = []
+#nested =[[2,1],[4,2],[5,3]]
+#print (teams, scores, empty, nested)
+
+#'Man Utd' in teams
+#>>> 'Man Utd' in teams
+#True
+
+#len(teams)
+#>>> len(teams)
+#3
+
+'''traverse the elements of a list is with a for loop'''
+#for team in teams:
+    #print (team)
+#Man Utd
+#Man city
+#Arsenal
+#>>>
+
+'''write or update the elements using indices with
+built-in functions range and len:'''
+
+#for i in range(len(scores)):
+#    scores[i] = scores[i] * 3
+#    print (scores)
+
+
+#for x in empty:
+#  print(x)
+ 
+
+'''The + operator concatenates lists'''
+#KFC = ['fried', 'chicken']
+#McD = ['burger', 'fries']
+#f_food = KFC + McD
+#print (f_food)
+
+'''The * operator repeats a list a given number of times'''
+
+#f_food = (KFC + McD) * 3
+#print (f_food)
+
+'''List slices'''
+
+EPL = ['manU', 'lPC', 'manC', 'tot', 'ars']
+
+''' If you omit the first index, the slice starts at the beginning'''
+#print(EPL [:3])
+#['ManU', 'LPL', 'ManC']
+
+''' same if you leave out the last index it starts from indicated index till the end'''
+#print(EPL [2:])
+#['ManC', 'Tot', 'Ars']
+
+'''if you dont indicate any indices, you get the whole list'''
+#print(EPL[:])
+'''can also use the [:] to make a copy of the list'''
+Prem = EPL[:]
+
+''' Using the slice operator to change or update a list'''
+#Prem[1:3] = ['chelsea', 'west ham']
+#print(Prem)
+#['ManU', 'chelsea', 'west ham', 'Tot', 'Ars']
+
+''' List methods '''
+'''Using the append method adds elements to the last index in a list'''
+#Prem.append('everton')
+#print (Prem)
+#['ManU', 'LPL', 'ManC', 'Tot', 'Ars', 'everton']
+''' the extend method allows an argument to append list to another list'''
+#Prem.extend(EPL)
+#print (Prem)
+#['ManU', 'LPL', 'ManC', 'Tot', 'Ars', 'ManU', 'LPL', 'ManC', 'Tot', 'Ars']
+#>>> 
+''' sort operation arranges list elements from lowes to highest'''
+#Prem.sort()
+#print (Prem)
+#['Ars', 'LPL', 'ManC', 'ManU', 'Tot']
+
+'''Most list methods are void and when assigned to a variable have a value of None'''
+#Eng_Pre = Prem.sort()
+#print (Eng_Pre)
+#None
+
+''' Filters, Maps and Reduce'''
+
+#t=[1,2,3]
+''' Reducing a list of number into a single number'''
+#def add_up(t):
+#    total = 0 
+#    for x in t: 
+#        total += x #augmented assignment statement 
+#    return total # using a variable this way is called an accumulator.
+
+''' An operation like this that combines a sequence of elements into a single value is sometimes
+called reduce '''
+#>>> print(add_up(t))
+#6
+
+'''using a built in function to do the same the evaluation as the def function'''
+#>>>sum(t) 
+#6
+
+'''An operation like capitalize_all is sometimes called a map because it “maps” a function
+(in this case the method capitalize) onto each of the elements in a sequence.
+def capitalize_all(EPL)'''
+#    res = [] # accumulator
+#    for t in EPL:
+#        res.append(t.capitalize())  
+#    return res
+
+#>>>print(capitalize_all(EPL))    
+#['Manu', 'Lpc', 'Manc', 'Tot', 'Ars']
+
+''' Another way of using function mapping is to use a function as a filter'''
+''' Is upper returns only strings with all uppercase, is searches through the
+elements looking for only uppercase strings to append (add) to res'''
+
+#def only_upper(EPL):
+#    res = []
+#    for s in EPL:
+#        if s.isupper():
+#            res.append(s)
+#    return res
+
+#print(only_upper(EPL))
+
+''' Aliasing , referencing'''
+#H=['M','a','n','U','t','d']
+#A= H
+#>>>A is H
+#True
+
+#>>>H is A
+#True
+
+#A.remove('t')
+#H.remove('d')
+#>>>print (H)
+#['M', 'a', 'n', 'U']
+
+
+#def match_day(h,b,a):
+#    game = h+b+a
+#    d = ' '
+#    c = d.join(game)
+#    return c
+
+#home = ['ManU']
+#between = ['vs']
+#away = ['Liverpool']
+
+#print (match_day(home, between, away))
+    
+#team = "Manutd ManCity Chelsea Arsenal Liverpool"
+#a = team.split()
+#print(a)
+
+#del a[4]
+#print(a)
+
+#a.remove("Chelsea")
+#print (a)
+
+#a.pop(2)
+#print(a)
+
+#a.sort()
+#print (a)
+
+
+#c = ["Charlton"]
+#w = ["West ham"]
+
+#a.append("Everton")
+#print (a)
+
+#a = a + c
+#print (a)
+
+#a += w
+#print (a)
+
+#D = " "
+#A = D.join(a)
+
+#print (A)
+
+
+team = ["manutd", "mancity"]
+c = ["everton"]
+
+team += [c]
+#print (team)
+
+a = team * 2
+#print(a)
+
+b = a[0:1]
+#print (b)
+
+b += ["liverpool"]
+#print (b)
+
+#def lower_case(b):
+#    ide = []
+#    for w in b:
+#        if w.islower():
+#            ide = ide.append(w)
+#    return ide
+
+#print(lower_case(b))
+
+
+#ide = []
+#ide = ide.append(b)
+#print(ide)
+
+
+def subroutine(n):
+    while n > 0:
+        print (n,)
+        n -= 1
+print(subroutine(10))
