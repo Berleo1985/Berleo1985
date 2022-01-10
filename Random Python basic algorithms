@@ -1,0 +1,51 @@
+def comp(x,y):
+    if x > y:
+        return 1
+    if x < y:
+        return -1
+    if x == y:
+        return 0
+
+#print(comp(3,2))
+#1
+#print(comp(2,3))
+#-1
+#print(comp(3,3))
+#0'''
+import math
+'''Defining the funtion I need calculate with the parameters of the required value'''
+#def hypotenuse(a, b):
+    #right_angle = a**2 + b**2
+    #answer = math.sqrt(right_angle)
+    #return answer
+
+#hypotenuse(3, 4)
+#hypotenuse(2, 8)
+#hypotenuse(5, 6)
+
+
+#def exchange(x, y):
+   # return 0.0
+
+
+#def exchange(x, y):
+   # x = input("how much RM do you have: ")
+   # y = 
+   # rate = x * y
+   # print(x, "Ringgit is equal to ", rate, "RWF" )
+   # return 0.0
+
+#def exchange(x, y):
+    #rate = x * y
+   # return rate
+
+
+def is_divisible(x, y):
+    return x % y == 0
+   
+def is_power(x,y):
+   return not is_divisible(x,y)
+   return y == x
+   return y == 1
+   return is_power (y/x, y)
+    
