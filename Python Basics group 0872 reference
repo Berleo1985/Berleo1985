@@ -1,0 +1,135 @@
+def print_volume(r):
+    pi=3.141592653589793 # value of pi in decimal 
+    r=(3/4*pi)**3  # expression of r (radius) variable
+    print(r) # volume of the sphere with a radius of 5
+
+print_volume(5)
+
+first_copy = 24.95*40/100+3 # subtracted the 40% discount and added the $3 for first book shipping cost 
+add_copy = first_copy + 0.75 # calculated the adtional cost per book shipped after the first book 
+print(add_copy*59) #total wholesale cost for 60 books shipped at first book $3 and then 59 books at 0.75 
+
+easy_mile = 8.15*2 # total time of 2 miles at easy pace, using a floating point instead of colon : to avoid syntax error
+tempo_mile = 7.12*3 # total time of 3 miles at tempo pace
+total_time = easy_mile + tempo_mile
+print(total_time)# total time for the complete 5 mile run
+
+# the total_time is 38min + 6:52am (time start) end time will be 7:30am
+
+
+import math
+
+def poem():
+    print ("roses are red")
+    print ("violets are blue")
+    print ("is programming fun for you?")
+
+def repeat_poem():
+    poem()
+    poem()
+
+repeat_poem()
+
+def football_team(ManUtd):
+    print(ManUtd)
+    print(ManUtd)
+
+def football_Number(two):
+    football_team(two)
+    football_team(two)
+
+football_team("ManU " + "Liverpoo " * 3)
+football_Number(math.sin(math.pi)+1)
+liverpool = "LiverPOO sucks as much as Arsenal"
+football_team(liverpool)
+
+part1= "Garfield"
+part2= " the lazy cat"
+
+def cat_twice(part1, part2):
+    cat = part1 + part2
+    football_team(cat)
+    football_Number(cat)
+    
+cat_twice(part1, part2)
+
+# function defined with a parameter to call the function and print the argument twice
+def print_double(leon):   
+    print(leon) # print first line  
+    print(leon) # print second line
+
+#--disney function--
+def disney(first_name, last_name):
+    character = first_name + last_name # assignment statement to a the variable "character" that concatonates the parameters in the defined funtions argument
+    print_double(character)# using a function within a function to call the variable within an argument twice 
+
+#--Main-- code outside the the function
+# Each parameter refers to the same value as its corresponding argument
+line1 = "Mickey " # line1 is the same as first_name
+line2 = "mouse"   # line2 is the same as last_name
+
+
+
+disney(line1, line2) # evaluates and executes the disney function & the print_double function
+result = print_double('meow')
+print(result)
+
+def right_justify():
+    s =(" " * 70) + "monty"
+    print(s)
+
+right_justify()
+
+
+#Example 1: Define a function that takes an argument. Call the function. Identify what code is the argument and what code is the parameter.
+
+def football_team(ManUtd): #ManUtd is the parameter 
+    print(ManUtd)
+    print(ManUtd)
+
+football_team("Pogba")# Pogba is the argument
+
+#Example 2: Call your function from Example 1 three times with different kinds of arguments: a value, a variable, and an expression. Identify which kind of argument is which. 
+
+champs = 2013 # champs is my variable
+
+football_team(2021 - 2013) #expression
+football_team("fernandez") #value 
+football_team(champs) #variable
+
+
+#Example 3: Create a function with a local variable. Show what happens when you try to use that variable outside the function. Explain the results.
+
+def Man_United():
+    champions = 2013 #local variable: a variable that is inside the body of a function 
+    
+
+Man_United(champions)# calling a function with local variable outside the function
+
+#Results in a NameError: name 'champions' is not defined, as the program cannot evaluate the value of the variable
+
+Man_United("champions")#calling the function argument returns another error.
+#Man_United() takes 0 positional arguments but 1 was given, refers me to the value of the argument was not provided in the functions parameter.
+
+
+
+#Example 4: Create a function that takes an argument. Give the function parameter a unique name. Show what happens when you try to use that parameter name outside the function. Explain the results.
+
+#def best_team(epl):
+
+
+#best_team(epl) # The code wont run with out a statement indented into the body after defining the function.
+
+#Example 5: Show what happens when a variable defined outside a function has the same name as a local variable inside a function. Explain what happens to the value of each variable as the program runs.
+
+#The program evaluates the code line on the call function based on "Flow of Execution"
+
+Standing = 2 # the program,evaluates the code but doest execute as no statment is prevelant.
+
+def table_pos(): #(2) Identifies the function.
+    Standing = 2 # (3) evaluates the local variable as part of the funtion.
+    print(Standing) #(4) returns the value of the statement.
+
+table_pos() # (1) Program evaluates
+
+2 #(5) outside value had no conflicts with same name local variable and the program ran as the code instructed. 
