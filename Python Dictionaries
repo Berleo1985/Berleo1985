@@ -1,0 +1,78 @@
+##short_to_full = dict()
+#print(short_to_full)
+##short_to_full ["ManUtd"] = "Manchester United"
+##short_to_full ["ManCity"] = "Manchester City"
+##short_to_full ["Tot"] = "Tottenham"
+##short_to_full ["Ars"] = "Arsenal"
+#print(short_to_full)
+##Team = short_to_full.values()
+##"Manchester City" in Team
+
+##def team_name(a):
+##    Dic = dict()
+##    for t in a:
+##        if t not in Dic:
+##            Dic[t] = 1
+##        else:
+##            Dic[t] += 1
+##    return Dic
+
+
+##team = team_name("Manchester United")
+##print (team)
+
+''' Using the get method inside the histogram counting function'''
+
+def team_name(a):
+    dic = dict()
+    for t in a:
+       dic[t] = dic.get(t, 0) + 1
+    return dic
+
+
+'''inverting a dictionary creating keys to lists'''
+
+def reverse_team_key(a):
+    reverse = dict()
+    for team in a:
+        value = a[team]
+        if value not in reverse:
+            reverse[value] = [team]
+        else:
+            reverse[value].append(team)
+    return reverse
+
+hist = team_name("Manchester City")
+print (hist)
+
+
+reverse = reverse_team_key(hist)
+p
+
+def invert_dict(d):
+     inverse = dict()
+     for key in d:
+          val = d[key]
+          if val not in inverse:
+               inverse[val] = [key]
+          else:
+               inverse[val].append(key)
+     return inverser.int(reverse)
+    
+def invert_dict(d):
+    original=d
+    print("ORIGINAl DICTIONARY")
+    print(original)#prints original dictionary
+    inverse = dict()
+    print("")
+    print("INVERTED KEYS ")
+    for key in d:
+        val = d[key]
+        print(val) #prints seprate keys in dictionary
+        if val not in inverse:
+            inverse[val] = [key]
+        else:
+            inverse[val].append(key)
+    print("")
+    print("INVERTED DICTIONARY")
+    return inverse #prints new inverted dictionary
